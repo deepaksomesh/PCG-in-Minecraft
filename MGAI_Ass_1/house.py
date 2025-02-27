@@ -3,7 +3,6 @@ from gdpc import Block, Editor, Box
 from gdpc import geometry as geo
 from gdpc import interface
 
-
 ED = Editor(buffering=True)
 # Here we read start and end coordinates of our build area
 build_area = ED.getBuildArea()  # BUILDAREA
@@ -104,12 +103,12 @@ def build_road():
 
     # east road
     geo.placeCuboid(ED, (x_ctr - 2, y, minZ), (x_ctr - 2, y, maxZ), Block("end_stone_bricks"))
-    geo.placeCuboid(ED, (x_ctr - 1, y, minZ), (x_ctr + 1, y, maxZ), Block("gray_concrete"))
+    geo.placeCuboid(ED, (x_ctr - 1, y, minZ), (x_ctr + 1, y, maxZ), Block("polished_andesite"))
     geo.placeCuboid(ED, (x_ctr + 2, y, minZ), (x_ctr + 2, y, maxZ), Block("end_stone_bricks"))
     geo.placeCuboid(ED, (x_ctr - 2, y + 1, minZ), (x_ctr + 2, y + 3, maxZ), Block("air"))
     # north road
     geo.placeCuboid(ED, (minX, y, z_ctr - 2), (maxX, y, z_ctr - 2), Block("end_stone_bricks"))
-    geo.placeCuboid(ED, (minX, y, z_ctr - 1), (maxX, y, z_ctr + 1), Block("gray_concrete"))
+    geo.placeCuboid(ED, (minX, y, z_ctr - 1), (maxX, y, z_ctr + 1), Block("polished_andesite"))
     geo.placeCuboid(ED, (minX, y, z_ctr + 2), (maxX, y, z_ctr + 2), Block("end_stone_bricks"))
     geo.placeCuboid(ED, (minX, y + 1, z_ctr - 2), (maxX, y + 3, z_ctr + 2), Block("air"))
 
